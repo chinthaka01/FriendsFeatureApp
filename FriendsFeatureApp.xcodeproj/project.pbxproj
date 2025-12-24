@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		308B13E82EF9FEDA006BF4EB /* FriendsFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 308B13E72EF9FEDA006BF4EB /* FriendsFeature */; };
+		30B53AE02EFC6FE2009EB585 /* PlatformKit in Frameworks */ = {isa = PBXBuildFile; productRef = 30B53ADF2EFC6FE2009EB585 /* PlatformKit */; };
+		30B53AE32EFC6FEF009EB585 /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 30B53AE22EFC6FEF009EB585 /* DesignSystem */; };
+		30B53AE62EFC7065009EB585 /* FriendsFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 30B53AE52EFC7065009EB585 /* FriendsFeature */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30B53AE32EFC6FEF009EB585 /* DesignSystem in Frameworks */,
+				30B53AE62EFC7065009EB585 /* FriendsFeature in Frameworks */,
+				30B53AE02EFC6FE2009EB585 /* PlatformKit in Frameworks */,
 				308B13E82EF9FEDA006BF4EB /* FriendsFeature in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -118,6 +124,9 @@
 			name = FriendsFeatureApp;
 			packageProductDependencies = (
 				308B13E72EF9FEDA006BF4EB /* FriendsFeature */,
+				30B53ADF2EFC6FE2009EB585 /* PlatformKit */,
+				30B53AE22EFC6FEF009EB585 /* DesignSystem */,
+				30B53AE52EFC7065009EB585 /* FriendsFeature */,
 			);
 			productName = FriendsFeatureApp;
 			productReference = 308B13BC2EF9FEB6006BF4EB /* FriendsFeatureApp.app */;
@@ -202,7 +211,9 @@
 			mainGroup = 308B13B32EF9FEB6006BF4EB;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				308B13E62EF9FEDA006BF4EB /* XCLocalSwiftPackageReference "../FriendsFeature" */,
+				30B53ADE2EFC6FE2009EB585 /* XCRemoteSwiftPackageReference "PlatformKit" */,
+				30B53AE12EFC6FEF009EB585 /* XCRemoteSwiftPackageReference "DesignSystem" */,
+				30B53AE42EFC7065009EB585 /* XCLocalSwiftPackageReference "../FriendsFeature" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 308B13BD2EF9FEB6006BF4EB /* Products */;
@@ -581,14 +592,47 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		308B13E62EF9FEDA006BF4EB /* XCLocalSwiftPackageReference "../FriendsFeature" */ = {
+		30B53AE42EFC7065009EB585 /* XCLocalSwiftPackageReference "../FriendsFeature" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../FriendsFeature;
 		};
 /* End XCLocalSwiftPackageReference section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		30B53ADE2EFC6FE2009EB585 /* XCRemoteSwiftPackageReference "PlatformKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/chinthaka01/PlatformKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.1;
+			};
+		};
+		30B53AE12EFC6FEF009EB585 /* XCRemoteSwiftPackageReference "DesignSystem" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/chinthaka01/DesignSystem.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		308B13E72EF9FEDA006BF4EB /* FriendsFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FriendsFeature;
+		};
+		30B53ADF2EFC6FE2009EB585 /* PlatformKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 30B53ADE2EFC6FE2009EB585 /* XCRemoteSwiftPackageReference "PlatformKit" */;
+			productName = PlatformKit;
+		};
+		30B53AE22EFC6FEF009EB585 /* DesignSystem */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 30B53AE12EFC6FEF009EB585 /* XCRemoteSwiftPackageReference "DesignSystem" */;
+			productName = DesignSystem;
+		};
+		30B53AE52EFC7065009EB585 /* FriendsFeature */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = FriendsFeature;
 		};
