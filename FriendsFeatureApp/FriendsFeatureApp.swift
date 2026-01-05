@@ -12,12 +12,14 @@ import FriendsFeature
 @main
 struct FriendsFeatureApp: App {
     let analytics = AnalyticsImpl()
-    let friendsAPI = FriendsFeatureAPIClient()
+    let networking = NetworkingImpl()
+    let friendsAPI: FriendsFeatureAPIClient
     let friendsDependencies: FriendsDependenciesImpl
     let friendsFactory: FriendsFeatureFactory
     let feature: MicroFeature
     
     init() {
+        friendsAPI = FriendsFeatureAPIClient(networking: networking)
         friendsDependencies = FriendsDependenciesImpl(friendsAPI: friendsAPI, analytics: analytics)
         friendsFactory = FriendsFeatureFactory(dependencies: friendsDependencies)
         feature = friendsFactory.makeFeature()
